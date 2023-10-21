@@ -4,7 +4,8 @@ import { FormHeaders } from '../'
 export default function PersonalInfo() {
   return (
     <section>
-      <div className='bg-white flex flex-col space-y-5 justify-center content-center px-5 absolute h-max top-24 right-0 left-0 py-5 mx-5 rounded-md'>
+      <div className='bg-white flex flex-col space-y-5 justify-center content-center px-5 
+      absolute h-max top-24 right-0 left-0 py-5 mx-5 rounded-md sm:static'>
         <FormHeaders personal={true} plans={false} addons={false} finished={false}/>
         <div className='flex flex-col space-y-1'>
           <label htmlFor="name" className='text-marine font-medium tracking-tight text-sm'>Name</label>
@@ -22,7 +23,8 @@ export default function PersonalInfo() {
           border-solid border-light-gray rounded-sm py-2 px-3' />
         </div>
       </div>
-      <div className='flex flex-wrap items-end content-end justify-end bg-white py-5 pr-8 absolute bottom-0 right-0 left-0'>
+      <div className='flex flex-wrap items-end content-end justify-end bg-white 
+      py-5 pr-8 absolute bottom-0 right-0 left-0 sm:static'>
         <button className='border-[1px] border-solid border-transparent rounded-md px-3 py-2 text-white 
         bg-marine'>Next Step</button>
       </div>
