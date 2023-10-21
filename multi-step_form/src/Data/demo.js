@@ -35,18 +35,22 @@ export const nav = [
 
 export const form = [
     {
+        id: 1,
         title: 'Personal info',
         info: 'Please provide your name, email address, and phone number.',
     },
     {
+        id: 2,
         title: 'Select your plan',
         info: 'You have the option of monthly or yearly billing.',
     },
     {
+        id: 3,
         title: 'Pick add-ons',
         info: 'Add-ons help enhance your gaming experience.',
     },
     {
+        id: 4,
         title: 'Finishing up',
         info: 'Double-check everything looks OK before confirming.',
     }

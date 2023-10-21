@@ -5,7 +5,7 @@ export default function Finished() {
   return (
     <section>
         <NavBar />
-        <FormHeaders />
+        <FormHeaders personal={false} plans={false} addons={false} finished={true}/>
         <FinishedInfo />
     </section>
 

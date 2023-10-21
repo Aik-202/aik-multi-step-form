@@ -5,7 +5,7 @@ export default function AddOns() {
   return (
     <section>
         <NavBar />
-        <FormHeaders personal={true}/>
+        <FormHeaders personal={true} plans={false} addons={false} finished={false}/>
         <PersonalInfo />
     </section>
 
