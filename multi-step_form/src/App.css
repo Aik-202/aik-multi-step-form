@@ -12,6 +12,10 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
+h1, h2, input, p, section, div {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 .attribution { 
     font-size: 11px; 
     text-align: center; 

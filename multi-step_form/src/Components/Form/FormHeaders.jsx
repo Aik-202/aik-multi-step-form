@@ -11,8 +11,8 @@ export default function FormHeaders(props) {
       props.addons && item.id == 3 ? 'flex' :
       props.finished && item.id == 4 ? 'flex' : 'hidden'
     } flex flex-col`}>
-      <h1>{item.title}</h1>
-      <p>{item.info}</p>
+      <h1 className='text-marine text-2xl font-bold tracking-wider leading-10'>{item.title}</h1>
+      <p className='text-cool font-medium leading-6'>{item.info}</p>
     </div>})
   )
 }

@@ -4,7 +4,7 @@ import { AddOnsInfo, NavBar, FormHeaders } from '../Components'
 export default function AddOns() {
   return (
     <section>
-        <NavBar />
+        <NavBar addons={true}/>
         <FormHeaders personal={false} plans={false} addons={true} finished={false}/>
         <AddOnsInfo />
     </section>
