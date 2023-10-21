@@ -1,0 +1,5 @@
+export {default as Advanced} from './images/icon-advanced.svg'
+export {default as Arcade} from './images/icon-arcade.svg'
+export {default as Check} from './images/icon-checkmark.svg'
+export {default as Pro} from './images/icon-pro.svg'
+export {default as Thank} from './images/icon-thank-you.svg'
