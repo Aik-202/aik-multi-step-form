@@ -1,11 +1,10 @@
 import React from 'react'
-import { PersonalInfo, NavBar, FormHeaders } from '../Components'
+import { PersonalInfo, NavBar } from '../Components'
 
-export default function AddOns() {
+export default function Personal() {
   return (
-    <section>
+    <section className='bg-light-blue relative h-full'>
         <NavBar />
-        <FormHeaders personal={true} plans={false} addons={false} finished={false}/>
         <PersonalInfo />
     </section>
 
