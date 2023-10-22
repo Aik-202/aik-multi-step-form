@@ -1,3 +1,4 @@
+import { Arcade, Advanced, Pro } from './'
 export const nav = [
     {
         list: '1',
@@ -53,5 +54,23 @@ export const form = [
         id: 4,
         title: 'Finishing up',
         info: 'Double-check everything looks OK before confirming.',
+    }
+]
+
+export const plans = [
+    {
+        img: Arcade,
+        text: 'Arcade',
+        fee: '$9/mo'
+    },
+    {
+        img: Advanced,
+        text: 'Advanced',
+        fee: '$12/mo'
+    },
+    {
+        img: Pro,
+        text: 'Pro',
+        fee: '$15/mo'
     }
 ]
