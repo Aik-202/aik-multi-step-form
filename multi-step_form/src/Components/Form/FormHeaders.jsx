@@ -10,9 +10,9 @@ export default function FormHeaders(props) {
       props.plans && item.id == 2 ? 'flex' :
       props.addons && item.id == 3 ? 'flex' :
       props.finished && item.id == 4 ? 'flex' : 'hidden'
-    } flex flex-col sm:w-max`}>
+    } flex flex-col lg:w-max`}>
       <h1 className='text-marine text-2xl font-bold tracking-wider leading-10'>{item.title}</h1>
-      <p className='text-cool font-medium leading-6 sm:text-sm sm:w-full'>{item.info}</p>
+      <p className='text-cool font-medium leading-6 lg:text-sm lg:w-full'>{item.info}</p>
     </div>})
   )
 }
