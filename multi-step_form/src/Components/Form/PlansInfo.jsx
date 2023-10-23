@@ -36,8 +36,8 @@ export default function PlansInfo() {
           <div className='flex flex-col space-y-3 sm:space-y-5'>
             <div className='flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3'>
               {plans.map((item) => {return <div key={item.text} id={item.text} className={`flex flex-row 
-              space-x-3 border-[1px] rounded-lg px-3 py-3 sm:space-x-0 sm:flex-col sm:justify-start sm:w-max
-              lg:pr-12 cursor-pointer
+              space-x-3 border-[1px] rounded-lg px-3 py-3 sm:space-x-0 sm:flex-col sm:justify-start 
+              sm:w-[6rem] lg:w-[8rem] lg:pr-12 cursor-pointer
               ${planActive == "Arcade" && item.text == "Arcade" ? 'bg-light-blue bg-opacity-[20%] border-t-marine border-purplish': 
               planActive == "Advanced" && item.text == "Advanced" ? 'bg-light-blue  bg-opacity-[20%] border-t-marine border-purplish': 
               planActive == "Pro" && item.text == "Pro" ? 'bg-light-blue  bg-opacity-[20%] border-t-marine border-purplish': 
