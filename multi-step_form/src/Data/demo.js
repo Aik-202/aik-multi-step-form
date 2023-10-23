@@ -61,16 +61,19 @@ export const plans = [
     {
         img: Arcade,
         text: 'Arcade',
-        fee: '$9/mo'
+        month: '$9/mo',
+        year: '$90/yr'
     },
     {
         img: Advanced,
         text: 'Advanced',
-        fee: '$12/mo'
+        month: '$12/mo',
+        year: '$120/yr'
     },
     {
         img: Pro,
         text: 'Pro',
-        fee: '$15/mo'
+        month: '$15/mo',
+        year: '$150/yr'
     }
 ]

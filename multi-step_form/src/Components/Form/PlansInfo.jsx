@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 export default function PlansInfo() {
   const navigate = useNavigate();
   const [planActive, setPlanActive] = React.useState('Arcade');
+  const [fee, setFee] = React.useState(true);
 
   const back = () => {
     navigate('/');
@@ -21,6 +22,10 @@ export default function PlansInfo() {
     if (e.target.id == "Pro") {
       setPlanActive('Pro');
     }
+  }
+
+  const changeFee = () => {
+    setFee((prev) => !prev)
   }
 
   return (
@@ -39,17 +44,21 @@ export default function PlansInfo() {
               <img src={item.img} className='self-start'/>
               <h2 className='flex flex-col space-y-[0.09rem]'>
                 <span className='text-base font-bold tracking-tight text-marine'>{item.text}</span>
-                <span className='text-xs font-medium tracking-tight text-light-gray'>{item.fee}</span>
+                <span className='text-xs font-medium tracking-tight text-light-gray'>
+                {fee ? item.month : item.year}</span>
                 <span className='text-xs font-medium text-marine tracking-tight'>2 months free</span>
               </h2>
             </div>})}
-            <div className='flex flex-row space-x-5 justify-center bg-magnolia py-3 rounded-lg'>
-              <h2>Monthly</h2>
-              <button className='bg-marine border-[1px] border-transparent px-5 py-2 rounded-xl relative'>
-                <span className='rounded-[100%] border-[1px] border-transparent bg-white px-[0.3rem] py-[0.3rem]
-                absolute top-[5px] left-1'></span>
+            <div className='flex flex-row space-x-5 justify-center bg-magnolia bg-opacity-[40%] 
+            py-3 rounded-lg'>
+              <h2 className={`font-bold ${fee ? 'text-marine': 'text-light-gray'}`}>Monthly</h2>
+              <button className='bg-marine border-[1px] border-transparent px-5 py-2 rounded-xl 
+              relative' onClick={changeFee}>
+                <span className={`rounded-[100%] border-[1px] border-transparent bg-white px-[0.3rem] py-[0.3rem]
+                absolute top-[5px] 
+                ${fee ? 'left-1' : 'right-1'}`}></span>
               </button>
-              <h2>Yearly</h2>
+              <h2 className={`font-bold ${fee ? 'text-light-gray' : 'text-marine'}`}>Yearly</h2>
             </div>
           </div>
         </div>
