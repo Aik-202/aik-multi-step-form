@@ -24,7 +24,7 @@ export default function PersonalInfo() {
         </div>
       </div>
       <div className='flex flex-wrap items-end content-end justify-end bg-white 
-      py-5 pr-8 absolute bottom-0 right-0 left-0 sm:static sm:pr-10 md:pr-16 sm:rounded-xl'>
+      py-5 pr-8 absolute bottom-0 right-0 left-0 sm:static sm:pr-10 md:pr-16 sm:rounded-xl lg:mt-10'>
         <button className='border-[1px] border-solid border-transparent rounded-md px-3 py-2 text-white 
         bg-marine'>Next Step</button>
       </div>
