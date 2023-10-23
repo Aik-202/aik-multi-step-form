@@ -11,17 +11,34 @@ export default function PlansInfo() {
     navigate('/');
   }
 
+  const changePlan = (e) => {
+    if (e.target.id == "Arcade") {
+      setPlanActive('Arcade');
+    }
+    if (e.target.id == "Advanced") {
+      setPlanActive('Advanced');
+    }
+    if (e.target.id == "Pro") {
+      setPlanActive('Pro');
+    }
+  }
+
   return (
     <section>
         <div className='bg-white flex flex-col space-y-5 justify-center content-center px-5 
         absolute h-max top-24 right-0 left-0 py-4 mx-5 rounded-md sm:static md:mr-10'>
           <FormHeaders personal={false} plans={true} addons={false} finished={false}/>
           <div className='flex flex-col space-y-3'>
-            {plans.map((item) => {return <div key={item.text} className='flex flex-row space-x-3 border-[1px]
-            border-purplish rounded-lg px-3 py-3 border-t-marine'>
+            {plans.map((item) => {return <div key={item.text} id={item.text} className={`flex flex-row 
+            space-x-3 border-[1px] rounded-lg px-3 py-3
+            ${planActive == "Arcade" && item.text == "Arcade" ? 'bg-light-blue bg-opacity-[20%] border-t-marine border-purplish': 
+            planActive == "Advanced" && item.text == "Advanced" ? 'bg-light-blue  bg-opacity-[20%] border-t-marine border-purplish': 
+            planActive == "Pro" && item.text == "Pro" ? 'bg-light-blue  bg-opacity-[20%] border-t-marine border-purplish': 
+            'bg-transparent border-light-gray border-t-light-gray'
+            } `} onClick={changePlan}>
               <img src={item.img} className='self-start'/>
-              <h2 className='flex flex-col space-y-0'>
-                <span className='text-base font-bold tracking-wider text-marine'>{item.text}</span>
+              <h2 className='flex flex-col space-y-[0.09rem]'>
+                <span className='text-base font-bold tracking-tight text-marine'>{item.text}</span>
                 <span className='text-xs font-medium tracking-tight text-light-gray'>{item.fee}</span>
                 <span className='text-xs font-medium text-marine tracking-tight'>2 months free</span>
               </h2>
