@@ -8,6 +8,10 @@ export default function PlansInfo() {
   const [planActive, setPlanActive] = React.useState('Arcade');
   const [fee, setFee] = React.useState(true);
 
+  const forward = () => {
+    navigate('/addons')
+  }
+  
   const back = () => {
     navigate('/');
   }
@@ -70,7 +74,7 @@ export default function PlansInfo() {
         py-5 px-8 absolute bottom-0 right-0 left-0 sm:static sm:pr-10 md:pr-16 sm:rounded-xl lg:mt-10'>
           <button className='text-cool font-medium' onClick={back}>Go Back</button>
           <button className='border-[1px] border-solid border-transparent rounded-md px-3 py-2 text-white 
-        bg-marine'>Next Step</button>
+        bg-marine' onClick={forward}>Next Step</button>
         </div>
     </section>
   )
