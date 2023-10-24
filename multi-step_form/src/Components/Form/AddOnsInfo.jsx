@@ -6,15 +6,6 @@ import { addons } from '../../Data/demo';
 export default function AddOnsInfo() {
   const navigate = useNavigate();
   const [addonActive, setAddonActive] = React.useState('');
-  const [check, setCheck] = React.useState(false);
-
-  const checked = (e) => {
-    if (e.target.checked) {
-      setCheck(true)
-    } else {
-      setCheck(false)
-    }
-  }
 
   const changeAddon = (e) => {
     if (e.target.id == "Online service") {
@@ -43,12 +34,12 @@ export default function AddOnsInfo() {
          <FormHeaders personal={false} plans={false} addons={true} finished={false}/>
          {addons.map((item) => {return <div className={`flex flex-row space-x-3
          border-[1px] rounded-lg px-3 py-4 
-          ${addonActive == "Online service" && check && item.header == "Online service" ? 'bg-light-blue bg-opacity-[20%] border-t-marine border-purplish': 
-          addonActive == "Larger storage" && check && item.header == "Larger storage" ? 'bg-light-blue  bg-opacity-[20%] border-t-marine border-purplish': 
-          addonActive == "Customizable profile" && check && item.header == "Customizable profile" ? 'bg-light-blue  bg-opacity-[20%] border-t-marine border-purplish': 
+          ${addonActive == "Online service" && item.header == "Online service" ? 'bg-light-blue bg-opacity-[20%] border-t-marine border-purplish': 
+          addonActive == "Larger storage" && item.header == "Larger storage" ? 'bg-light-blue  bg-opacity-[20%] border-t-marine border-purplish': 
+          addonActive == "Customizable profile" && item.header == "Customizable profile" ? 'bg-light-blue  bg-opacity-[20%] border-t-marine border-purplish': 
           'bg-transparent border-light-gray border-t-light-gray'
           }`} onClick={changeAddon} key={item.header}>
-          <input type="checkbox" id={item.header} className='w-[7.5%]' onClick={checked}/>
+          <input type="checkbox" id={item.header} className='w-[7.5%]' />
           <div className='flex flex-col space-y-0'>
             <label htmlFor={item.header} className='text-sm text-marine font-bold tracking-wide'>
             {item.header}</label>
