@@ -91,7 +91,7 @@ export const addons = [
         year: '+$20/yr'
     },
     {
-        header: 'Customizable Profile',
+        header: 'Customizable profile',
         text: 'Custom theme on your profile',
         month: '+$2/mo',
         year: '+$20/yr'
