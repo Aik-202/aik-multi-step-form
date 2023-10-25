@@ -9,7 +9,7 @@ export default function FinishedInfo() {
     navigate('/addons');
   }
   return (
-    <section className='w-max lg:w-[30rem]'>
+    <section>
       <div className='bg-white flex flex-col space-y-5 justify-center content-center px-5 
       absolute h-max top-24 right-0 left-0 py-4 mx-5 rounded-md sm:static md:mr-10'>
         <FormHeaders personal={false} plans={false} addons={false} finished={true}/>

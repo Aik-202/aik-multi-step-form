@@ -39,7 +39,7 @@ export default function AddOnsInfo() {
           addonActive == "Customizable profile" && item.header == "Customizable profile" ? 'bg-light-blue  bg-opacity-[20%] border-t-marine border-purplish': 
           'bg-transparent border-light-gray border-t-light-gray'
           }`} onClick={changeAddon} key={item.header}>
-          <input type="checkbox" id={item.header} className='w-[9%]' />
+          <input type="checkbox" id={item.header} className='self-center xl:self-auto xl:w-[9%]' />
           <div className='flex flex-col space-y-0 self-center justify-between w-full'>
             <label htmlFor={item.header} className='text-sm text-marine font-bold tracking-wide'>
             {item.header}</label>
