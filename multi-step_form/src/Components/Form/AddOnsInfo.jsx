@@ -43,7 +43,7 @@ export default function AddOnsInfo() {
           <div className='flex flex-col space-y-0'>
             <label htmlFor={item.header} className='text-sm text-marine font-bold tracking-wide'>
             {item.header}</label>
-            <p className='text-xs w-[110%] xl:w-[115%]'>{item.text}</p>
+            <p className='text-xs w-[10rem] xl:w-[15rem]'>{item.text}</p>
           </div>
           <p className='self-center text-sm text-purplish'>{item.month}</p>
          </div>})}
