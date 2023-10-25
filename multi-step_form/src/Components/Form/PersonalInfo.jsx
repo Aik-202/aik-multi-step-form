@@ -12,7 +12,7 @@ export default function PersonalInfo() {
   return (
     <section>
       <div className='bg-white flex flex-col space-y-5 justify-center content-center px-5 
-      absolute h-max top-24 right-0 left-0 py-5 mx-5 rounded-md sm:static md:mr-10 sm:mt-8'>
+      absolute h-max top-24 right-0 left-0 py-5 mx-5 rounded-md sm:static md:mr-10 sm:mt-8 lg:pr-10'>
         <FormHeaders personal={true} plans={false} addons={false} finished={false}/>
         <div className='flex flex-col space-y-1'>
           <label htmlFor="name" className='text-marine font-medium tracking-tight text-sm'>Name</label>

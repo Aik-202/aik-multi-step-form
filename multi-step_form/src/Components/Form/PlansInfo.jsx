@@ -71,7 +71,7 @@ export default function PlansInfo() {
           </div>
         </div>
         <div className='flex justify-between bg-white 
-        py-5 px-8 absolute bottom-0 right-0 left-0 sm:static sm:pr-10 sm:pl-12 md:pr-16 sm:rounded-xl lg:mt-10'>
+        py-5 px-8 absolute bottom-0 right-0 left-0 sm:static sm:pr-10 sm:pl-12 md:pr-16 sm:rounded-xl lg:mt-20'>
           <button className='text-cool font-medium' onClick={back}>Go Back</button>
           <button className='border-[1px] border-solid border-transparent rounded-md px-3 py-2 text-white 
         bg-marine' onClick={forward}>Next Step</button>
