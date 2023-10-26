@@ -5,17 +5,26 @@ import { addons } from '../../Data/demo';
 
 export default function AddOnsInfo() {
   const navigate = useNavigate();
-  const [addonActive, setAddonActive] = React.useState('');
+  const [addonActive1, setAddonActive1] = React.useState(false);
+  const [addonActive2, setAddonActive2] = React.useState(false);
+  const [addonActive3, setAddonActive3] = React.useState(false);
 
-  const changeAddon = (e) => {
-    if (e.target.id == "Online service") {
-      setAddonActive('Online service');
+
+  const checkAddon = (e) => {
+    if (e.target.id == "Online service" && e.target.checked) {
+      setAddonActive1(true);
+    } else  if (e.target.id == "Online service" && !e.target.checked){
+      setAddonActive1(false)
+    } 
+    if (e.target.id == "Larger storage" && e.target.checked) {
+      setAddonActive2(true);
+    } else if (e.target.id == "Larger storage" && !e.target.checked) {
+      setAddonActive2(false)
     }
-    if (e.target.id == "Larger storage") {
-      setAddonActive('Larger storage');
-    }
-    if (e.target.id == "Customizable profile") {
-      setAddonActive('Customizable profile');
+    if (e.target.id == "Customizable profile" && e.target.checked) {
+      setAddonActive3(true);
+    } else  if (e.target.id == "Customizable profile" && !e.target.checked){
+      setAddonActive3(false)
     }
   }
 
@@ -34,11 +43,11 @@ export default function AddOnsInfo() {
          <FormHeaders personal={false} plans={false} addons={true} finished={false}/>
          {addons.map((item) => {return <div className={`flex flex-row space-x-3
          border-[1px] rounded-lg px-3 py-4 
-          ${addonActive == "Online service" && item.header == "Online service" ? 'bg-light-blue bg-opacity-[20%] border-t-marine border-purplish': 
-          addonActive == "Larger storage" && item.header == "Larger storage" ? 'bg-light-blue  bg-opacity-[20%] border-t-marine border-purplish': 
-          addonActive == "Customizable profile" && item.header == "Customizable profile" ? 'bg-light-blue  bg-opacity-[20%] border-t-marine border-purplish': 
+          ${addonActive1 && item.header == "Online service" ? 'bg-light-blue bg-opacity-[20%] border-t-marine border-purplish': 
+          addonActive2 && item.header == "Larger storage" ? 'bg-light-blue  bg-opacity-[20%] border-t-marine border-purplish': 
+          addonActive3 && item.header == "Customizable profile" ? 'bg-light-blue  bg-opacity-[20%] border-t-marine border-purplish': 
           'bg-transparent border-light-gray border-t-light-gray'
-          }`} onClick={changeAddon} key={item.header}>
+          }`} onClick={checkAddon} key={item.header}>
           <input type="checkbox" id={item.header} className='self-center xl:self-auto xl:w-[9%]' />
           <div className='flex flex-col space-y-0 self-center justify-between w-full'>
             <label htmlFor={item.header} className='text-sm text-marine font-bold tracking-wide'>
