@@ -7,3 +7,5 @@ export {default as PersonalInfo} from './Form/PersonalInfo'
 export {default as PlansInfo} from './Form/PlansInfo'
 export {default as AddOnsInfo} from './Form/AddOnsInfo'
 export {default as FinishedInfo} from './Form/FinishedInfo'
+
+export {default as ThanksInfo} from './ThanksInfo'

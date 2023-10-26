@@ -8,7 +8,8 @@ import {
   Personal,
   Plans,
   AddOns,
-  Finished
+  Finished,
+  Thanks
 } from './Pages'
 import './App.css'
 
@@ -22,6 +23,7 @@ function App() {
             <Route exact path='/plans' element={ <Plans /> }></Route>
             <Route exact path='/addons' element={ <AddOns /> }></Route>
             <Route exact path='/finished' element={ <Finished /> }></Route>
+            <Route exact path='/thanks' element={ <Thanks /> }></Route>
           </Routes>
         </Router>
       </>

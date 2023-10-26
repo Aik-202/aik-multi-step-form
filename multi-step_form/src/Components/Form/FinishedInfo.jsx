@@ -8,6 +8,11 @@ export default function FinishedInfo() {
   const back = () => {
     navigate('/addons');
   }
+
+  const forward = () => {
+    navigate('/thanks');
+  }
+
   return (
     <section className='lg:w-[31rem] xl:w-[33rem]'>
       <div className='bg-white flex flex-col space-y-5 justify-center content-center px-5 
@@ -41,7 +46,7 @@ export default function FinishedInfo() {
       lg:mt-20'>
         <button className='text-cool font-medium' onClick={back}>Go Back</button>
         <button className='border-[1px] border-solid border-transparent rounded-md px-3 py-2 text-white 
-      bg-purplish' >Confirm</button>
+      bg-purplish' onClick={forward}>Confirm</button>
       </div>
     </section>
   )
