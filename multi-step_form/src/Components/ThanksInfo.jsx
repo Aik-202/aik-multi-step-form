@@ -5,7 +5,7 @@ export default function ThanksInfo() {
     return (
     <section className='w-max sm:py-2 sm:w-[28rem] lg:py-0 lg:w-[32rem] xl:w-[33rem]'>
         <div className='bg-white flex flex-col space-y-5 justify-center content-center px-5 
-        absolute h-max top-24 right-0 left-0 py-16 mx-5 rounded-md sm:static md:mr-10'>
+        absolute h-max top-24 right-0 left-0 py-16 sm:py-[6.5rem] lg:py-[9.5rem] mx-5 rounded-md sm:static md:mr-10'>
             <figure className='flex justify-center'>
                 <img src={Thank} alt="Thank-you" className='max-w-[20%]'/>
             </figure>
